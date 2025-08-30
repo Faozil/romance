@@ -5,12 +5,13 @@ interface QuestionScreenProps {
   noClickCount: number;
   onNoClick: () => void;
   onYesClick: () => void;
+  herName: string; // Add this line
 }
 
-const QuestionScreen: React.FC<QuestionScreenProps> = ({ noClickCount, onNoClick, onYesClick }) => {
+const QuestionScreen: React.FC<QuestionScreenProps> = ({ noClickCount, onNoClick, onYesClick, herName }) => {
   const getEncouragementMessage = () => {
     if (noClickCount === 0) return '';
-    if (noClickCount < 3) return `Aww come on, Aldanesse... 🥺`;
+    if (noClickCount < 3) return `Aww come on, ${herName}... 🥺`;
     if (noClickCount < 5) return `You've clicked No ${noClickCount} times already... 😅`;
     if (noClickCount < 8) return `Maybe just say Yes? Pretty please? 🙏`;
     return `${noClickCount} times?! I'm not giving up! 💪`;
@@ -21,7 +22,7 @@ const QuestionScreen: React.FC<QuestionScreenProps> = ({ noClickCount, onNoClick
       <div className="text-center max-w-lg">
         <div className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl">
           <h1 className="font-pacifico text-5xl text-pink-600 mb-8">
-            Do you like Faozil?
+            Do you like me?
           </h1>
           
           {noClickCount > 0 && (

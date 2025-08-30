@@ -23,7 +23,7 @@ const MessageScreen: React.FC<MessageScreenProps> = ({ onSubmit, onSkip }) => {
           <Heart className="w-16 h-16 text-pink-500 mx-auto mb-6 animate-heartbeat fill-current" />
           
           <h1 className="font-pacifico text-3xl text-pink-600 mb-4">
-            Leave a message for Faozil 💌
+            "Leave a message 💌, it is totally anonymous (Not really)"
           </h1>
           
           <p className="text-gray-600 mb-8">
